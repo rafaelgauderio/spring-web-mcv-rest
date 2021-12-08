@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'war'
 }
 
 group = 'com.rafaeldeluca'
@@ -13,9 +14,17 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.1'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.jboss.resteasy:Validation-test-WF8:3.0.19.Final'
+	implementation 'io.openliberty.features:beanValidation-2.0:21.0.0.12'
+	implementation 'io.openliberty.features:beanValidation-1.1:21.0.0.12'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.4.0'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+
 }
 
 test {
